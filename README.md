@@ -1,4 +1,4 @@
-# Akeyless Permissions Export Tool
+# Akeyless RBAC Audit Tool
 
 This tool automates the generation of a detailed CSV report mapping Akeyless Roles to their Auth Methods and Access Rules.
 
@@ -8,13 +8,13 @@ This tool automates the generation of a detailed CSV report mapping Akeyless Rol
 ## 📂 Core Components
 | File | Function |
 | :--- | :--- |
-| export_permissions.sh | **Main Script**: Fetches data from Akeyless and processes it via `jq`. |
-| auth_methods.json | **Temp File**: Cached list of authentication methods (slurpfile). |
+| rbac_audit.sh | **Main Script**: Fetches data from Akeyless and processes it via `jq`. |
+| auth.json | **Temp File**: Cached list of authentication methods (slurpfile). |
 | roles.json | **Temp File**: Raw export of all roles and their rules. |
 
 ## 🏗️ Processing Logic
 The script performs a relational join between two datasets:
-1. **Auth Map**: Creates a high-performance lookup table from `auth_methods.json`.
+1. **Auth Map**: Creates a high-performance lookup table from `auth.json`.
 2. **Role Iteration**: Traverses every role and its associated access methods.
 3. **Rule Flattening**: Expands every path-rule into a unique row in the CSV.
 
@@ -31,11 +31,11 @@ The script performs a relational join between two datasets:
 
 ## 🚀 Quick Start
 1. Ensure you are logged into Akeyless CLI.
-2. Run the export script:
+2. Run the audit script:
 ```bash
-./export_permissions.sh
+bash ./rbac_audit.sh
 ```
-3. Open `akeyless_permissions_report.csv` in Excel or Google Sheets.
+3. Open `akeyless_rbac_audit.csv` in Excel or Google Sheets.
 
 ---
 **Maintained by**: [leon-maister](https://github.com/leon-maister)
