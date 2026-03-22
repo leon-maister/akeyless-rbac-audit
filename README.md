@@ -30,7 +30,7 @@ The script performs a relational join between two datasets:
 | **Capabilities** | `.capabilities` | List of permissions (read, list, etc.). |
 
 ## 🚀 Quick Start
-1. Ensure you are logged into Akeyless CLI.
+1. **Ensure your Akeyless CLI is configured and authenticated** (e.g., via Access ID/Key environment variables).
 2. Run the audit script:
 ```bash
 bash ./rbac_audit.sh
