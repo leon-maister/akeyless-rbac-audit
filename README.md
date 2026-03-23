@@ -1,9 +1,9 @@
 # Akeyless RBAC Audit Tool
 
-This tool automates the generation of a detailed CSV report mapping Akeyless Roles to their Auth Methods and Access Rules.
+This tool automates the generation of a detailed CSV report mapping Akeyless Roles to their Auth Methods, Access Rules, and Sub-Claims.
 
 ### 🎯 Project Goal
-**To provide a clear, auditable overview of "Who has access to What" by joining Roles and Auth Methods into a single spreadsheet.**
+**To provide a clear, auditable overview of "Who has access to What" by joining Roles, Auth Methods, and specific Access Conditions into a single spreadsheet.**
 
 ## 📂 Core Components
 | File | Function |
@@ -14,9 +14,9 @@ This tool automates the generation of a detailed CSV report mapping Akeyless Rol
 
 ## 🏗️ Processing Logic
 The script performs a relational join between two datasets:
-1. **Auth Map**: Creates a high-performance lookup table from `auth.json`.
-2. **Role Iteration**: Traverses every role and its associated access methods.
-3. **Rule Flattening**: Expands every path-rule into a unique row in the CSV.
+1. **Auth Map**: Creates a high-performance lookup table for method names and descriptions.
+2. **Sub-Claims Parsing**: Flattens nested JSON claim objects into readable strings (`key=value`).
+3. **Rule Flattening**: Expands every path-rule into a unique row in the CSV for full granularity.
 
 ## 📊 CSV Structure
 | Column | Source | Description |
@@ -24,6 +24,8 @@ The script performs a relational join between two datasets:
 | **Auth_Method_ID** | `$aid` | Unique Access ID (e.g., p-xxxx). |
 | **Auth_Method_Name** | `$am.name` | Friendly name from the Auth Method config. |
 | **Auth_Method_Type** | `$am.type` | Technical type (SAML, OIDC, AWS, etc.). |
+| **Description** | `$am.desc` | Description of the Auth Method. |
+| **Sub_Claims** | `$sub_claims` | Specific access conditions (e.g., repo=my-repo). |
 | **Role_Name** | `$r_name` | The name of the Akeyless Role. |
 | **Rule_Type** | `.type` | Usually `path-rule` or `admin`. |
 | **Path** | `.path` | The secret path or object scope. |
