@@ -1,0 +1,1439 @@
+{
+  "next_page": "eyJpIjoiZ2l0aHViLWFjY2Vzcy1yb2xlIn0=",
+  "roles": [
+    {
+      "client_permissions": null,
+      "comment": "btg-access",
+      "creation_date": "2026-02-26T10:52:38Z",
+      "delete_protection": false,
+      "modification_date": "2026-02-26T10:52:38Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-g8f14k3k2ryil4r2omp6",
+          "auth_method_access_id": "p-odwkq8fna5w0cm",
+          "auth_method_name": "Gadi/root-cert-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 18797212,
+      "role_name": "BTG/BTG-super-role",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-02-11T11Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2026-02-03T07:55:19Z",
+      "delete_protection": false,
+      "modification_date": "2026-02-11T11:07:27Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-hnjuf7qlta26iqme8kiz",
+          "auth_method_access_id": "p-8cfp7tsd8vigcm",
+          "auth_method_name": "CertificateAccess",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 18527951,
+      "role_name": "CertificateAccess",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Cert/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-11T14Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-12-06T20:09:57Z",
+      "delete_protection": false,
+      "modification_date": "2025-12-06T21:00:52Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-gojwz0t6l8325uituag9",
+          "auth_method_access_id": "p-v5poytltfoddwm",
+          "auth_method_name": "Demo/AWS/Ristricted-Access-Demo/lambda-demo-secret",
+          "auth_method_sub_claims": {
+            "resource_id": [
+              "leon_lambda_demo"
+            ]
+          },
+          "sub_claims_case_sensitive": false
+        }
+      ],
+      "role_id": 17982977,
+      "role_name": "Demo/aws-python-lambda",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/Demo/Python-Lambda/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-16T10Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-09-03T10:14:19Z",
+      "delete_protection": false,
+      "modification_date": "2025-11-12T07:55:27Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-n3geti2ajl1fskm9h4st",
+          "auth_method_access_id": "p-6vowjjewzib7am",
+          "auth_method_name": "Demo/am-limited-key-access",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16816044,
+      "role_name": "Demo/limited-key-access",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "create"
+            ],
+            "path": "/Demo/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "target-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "reverse-rbac-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "search-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "gw-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "sra-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "usage-reports-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-11T15Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2026-03-07T21:54:40Z",
+      "delete_protection": false,
+      "modification_date": "2026-03-07T22:28:00Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-77ks21ayij8g5thuq0sv",
+          "auth_method_access_id": "p-jlpiokxbtzd8om",
+          "auth_method_name": "GitLab/GitLabAuth",
+          "auth_method_sub_claims": {
+            "user_login": [
+              "leon-maister"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 18903207,
+      "role_name": "Dev/GitLabRole",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-23T08Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-06-18T21:26:44Z",
+      "delete_protection": false,
+      "modification_date": "2026-02-09T10:18:42Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-0cnkki51way73kyufj2g",
+          "auth_method_access_id": "p-kpmndwm91rm4lm",
+          "auth_method_name": "LDAP/ldap-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-26kcrvglgi0e7qyfgf0d",
+          "auth_method_access_id": "p-afjl2wiju5ppgm",
+          "auth_method_name": "GCP/gcp-docker-GCE-gateway-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-2u4raoknejpi63z7cvpu",
+          "auth_method_access_id": "p-39ns77n5z32rgm",
+          "auth_method_name": "GCP/gcp-iam-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-364mvblnnr1qgf5khfk0",
+          "auth_method_access_id": "p-cvgv40mnx6uswm",
+          "auth_method_name": "AWS/aws-iam-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-37x4kykv34v23ho117or",
+          "auth_method_access_id": "p-g6ovtrot83dzam",
+          "auth_method_name": "Leon-user-full-api",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-391wqv4jk30oposwxj8b",
+          "auth_method_access_id": "p-v13f0jmrhyj4gm",
+          "auth_method_name": "GCP/gcp-autopilot-IAM-type-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-bn0hyf0vs83tf65v6stk",
+          "auth_method_access_id": "p-fm1m7s88i412gm",
+          "auth_method_name": "GCP/gcp-vcluster-gw-IAM-type-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-d99lm18128dtg023wxaq",
+          "auth_method_access_id": "p-kmx8x116z7j9km",
+          "auth_method_name": "K8s/k8s-auth-leon-test",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-db34h4pi2tu61fmsos4m",
+          "auth_method_access_id": "p-525zk2ev76tycm",
+          "auth_method_name": "WindowsCertAccess/CertAccessForCodeSign",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-e014fne811y9bldxttqw",
+          "auth_method_access_id": "p-hajc7fy6t2y7cm",
+          "auth_method_name": "WindowsCertAccess/CLI_Created_CertAccessForCodeSign",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-h4oov0opincih54l6gx7",
+          "auth_method_access_id": "p-7dsrptw2wgi3om",
+          "auth_method_name": "ENV0/env0-jwt",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-keplbcr2rrf5g8zxwcg9",
+          "auth_method_access_id": "p-v1s9e0jqs48tam",
+          "auth_method_name": "ENV0/env-zero-api-access",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-liz9p14j1yvel48puunf",
+          "auth_method_access_id": "p-gy3m5p1y87zugm",
+          "auth_method_name": "Jar-Signer/signer-user-gcp-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-luq8cgz6u6mjt0dhfcsw",
+          "auth_method_access_id": "p-yq0gfv1r01ghsm",
+          "auth_method_name": "saml okta",
+          "auth_method_sub_claims": {
+            "groups": [
+              "admin"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-lw8uomtquhy57pynyxi3",
+          "auth_method_access_id": "p-1s1zmob77o9cum",
+          "auth_method_name": "UID/uid-db",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-mxc83h7y3aj334cn1yww",
+          "auth_method_access_id": "p-u3bzae7n3ry1im",
+          "auth_method_name": "oidc-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-z1xe5sh01lct2arllgru",
+          "auth_method_access_id": "p-k5rqvoflld7ium",
+          "auth_method_name": "UID-method/CLI-created-UID",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 15929342,
+      "role_name": "FullAccess",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "role-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "target-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "auth-method-rule"
+          },
+          {
+            "capabilities": [
+              "sra_transparently_connect",
+              "sra_approval_authority",
+              "sra_upload_files",
+              "sra_download_files"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "sra-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "reverse-rbac-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "search-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "gw-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "sra-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "usage-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "event-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "event-forwarder-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-02-15T10Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-11-20T11:56:46Z",
+      "delete_protection": false,
+      "modification_date": "2025-11-20T11:57:19Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-767tu332cjpty3wwab6z",
+          "auth_method_access_id": "p-pfj07vf9mk3sam",
+          "auth_method_name": "Gadi/gadi-admin-access",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 17813554,
+      "role_name": "Gadi/gadi-admin-role",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "target-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "role-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "auth-method-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-02-10T10Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-11-20T12:45:56Z",
+      "delete_protection": false,
+      "modification_date": "2025-11-20T12:47:07Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-1ifoet31nb0m70hxms9i",
+          "auth_method_access_id": "p-yswl5jg37t2dgm",
+          "auth_method_name": "Gadi/gadi-signer-user-gcp",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-aamcxz27dwpu4hbdqh42",
+          "auth_method_access_id": "p-odwkq8fna5w0cm",
+          "auth_method_name": "Gadi/root-cert-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 17813893,
+      "role_name": "Gadi/gadi-signer-role",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "target-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "role-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/Gadi/*",
+            "start_time": 0,
+            "type": "auth-method-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-23T08Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-12-01T08:10:17Z",
+      "delete_protection": false,
+      "modification_date": "2025-12-24T09:23:32Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-dq8t6c02y19miu68ofyd",
+          "auth_method_access_id": "p-1y2dfwnlh21tzm",
+          "auth_method_name": "Gateway/azure-iam",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 17930075,
+      "role_name": "Gateway/gw-role",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "role-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "auth-method-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "target-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "reverse-rbac-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "search-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "gw-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "sra-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "usage-reports-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-01-19T11Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-08-24T14:05:48Z",
+      "delete_protection": false,
+      "modification_date": "2025-08-24T14:12:54Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-5g5bk6o9gbzudez18cx1",
+          "auth_method_access_id": "p-ob1d4cf7ca22om",
+          "auth_method_name": "JWT/jwt-calculator",
+          "auth_method_sub_claims": {
+            "repository": [
+              "leon-maister/Calculator"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16650352,
+      "role_name": "JWT/jwt-calculator-role",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/SecretExtractor/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2025-10-01T13Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-07-22T11:43:54Z",
+      "delete_protection": false,
+      "modification_date": "2025-07-22T11:54:25Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-10k5oi4sn9crcx5pm4og",
+          "auth_method_access_id": "p-umeoca0uo9qdkm",
+          "auth_method_name": "K8s/automatic-my-k8s-auth-method",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-cbend4trkm166j52mz4i",
+          "auth_method_access_id": "p-yxsovd59enoskm",
+          "auth_method_name": "k8s-auth-method-autopilot",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-pfbj0m6o6o3qeb7vz9it",
+          "auth_method_access_id": "p-nkplxa0poglskm",
+          "auth_method_name": "my-k8s-auth-method",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16260769,
+      "role_name": "K8s/K8s_Role",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/K8s/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2026-02-26T11:27:18Z",
+      "delete_protection": false,
+      "modification_date": "2026-02-26T11:27:18Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-hph563l8g0gmg57v263v",
+          "auth_method_access_id": "p-ob1d4cf7ca22om",
+          "auth_method_name": "JWT/jwt-calculator",
+          "auth_method_sub_claims": {
+            "repository": [
+              "calculator"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 18797480,
+      "role_name": "K8s/limited-access",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/Calculator/my-limited.secret",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-10-27T10:29:52Z",
+      "delete_protection": false,
+      "modification_date": "2026-03-11T08:43:11Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-3q3hqnhpu1qxhzv4plmq",
+          "auth_method_access_id": "p-nwtyzv76l0x5km",
+          "auth_method_name": "MyCompany/App/hello-world-k8s",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 17522037,
+      "role_name": "MyCompany/Apps/hello-world",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/MyCompany/Apps/HelloWorld/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-09-04T07:19:31Z",
+      "delete_protection": false,
+      "modification_date": "2025-10-27T07:47:46Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-kuvk2zw0107fcl50fdzv",
+          "auth_method_access_id": "p-i0vpsr6eza7fsm",
+          "auth_method_name": "MyCompany/demo-saml-okta",
+          "auth_method_sub_claims": {
+            "groups": [
+              "team-leader"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16830130,
+      "role_name": "MyCompany/BU-DVLP/BusinessUnit-DVLP-director-team-leader",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/MyCompany/BU-DVLP/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "search-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "gw-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "sra-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "event-rule"
+          }
+        ]
+      }
+    },
+    {
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-09-04T07:23:54Z",
+      "delete_protection": false,
+      "modification_date": "2025-10-27T07:44:27Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-tz1p42i4siqfkmc17q6x",
+          "auth_method_access_id": "p-i0vpsr6eza7fsm",
+          "auth_method_name": "MyCompany/demo-saml-okta",
+          "auth_method_sub_claims": {
+            "group": [
+              "developers"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16830157,
+      "role_name": "MyCompany/BU-DVLP/BusinessUnit-Dvlp-developer",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/MyCompany/BU-DVLP/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-10-27T08:16:59Z",
+      "delete_protection": false,
+      "modification_date": "2025-10-27T10:12:56Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-gdyk9noy6yn6k1x1tjrq",
+          "auth_method_access_id": "p-i0vpsr6eza7fsm",
+          "auth_method_name": "MyCompany/demo-saml-okta",
+          "auth_method_sub_claims": {
+            "group": [
+              "DevOps"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 17521038,
+      "role_name": "MyCompany/BU-DevOps/devops-expert",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/MyCompany/BU-DevOps/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-10-27T08:16:06Z",
+      "delete_protection": false,
+      "modification_date": "2025-11-05T10:44:16Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-ilnfza0800fsal01qtpo",
+          "auth_method_access_id": "p-i0vpsr6eza7fsm",
+          "auth_method_name": "MyCompany/demo-saml-okta",
+          "auth_method_sub_claims": {
+            "group": [
+              "devops-team-leader"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 17521033,
+      "role_name": "MyCompany/BU-DevOps/director-team-leader",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/MyCompany/BU-DevOps/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-09-06T11:14:36Z",
+      "delete_protection": false,
+      "modification_date": "2025-09-06T11:20:52Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-4xrzl28a1s51wyepdetp",
+          "auth_method_access_id": "p-yq0gfv1r01ghsm",
+          "auth_method_name": "saml okta",
+          "auth_method_sub_claims": {
+            "group": [
+              "prod_admin"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16866645,
+      "role_name": "RBAC_Explantion/Prod/Admins/SAML",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "search-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "gw-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "sra-reports-rule"
+          },
+          {
+            "capabilities": [
+              "read"
+            ],
+            "path": "/self",
+            "start_time": 0,
+            "type": "event-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-23T08Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-09-06T11:22:07Z",
+      "delete_protection": false,
+      "modification_date": "2025-09-06T11:22:07Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-sjqzjyfa1i8s3prk02gv",
+          "auth_method_access_id": "p-cvgv40mnx6uswm",
+          "auth_method_name": "AWS/aws-iam-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16866735,
+      "role_name": "RBAC_Explantion/Prod/Cloud/AWS",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-23T08Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-09-06T11:23:29Z",
+      "delete_protection": false,
+      "modification_date": "2025-09-06T11:23:29Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-u7yn6atnfxszwhvyml2m",
+          "auth_method_access_id": "p-v13f0jmrhyj4gm",
+          "auth_method_name": "GCP/gcp-autopilot-IAM-type-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16866772,
+      "role_name": "RBAC_Explantion/Prod/Cloud/GCP",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-23T08Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-09-06T11:36:07Z",
+      "delete_protection": false,
+      "modification_date": "2025-09-06T11:36:07Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-pcpzrlgdjcn4c4sw89na",
+          "auth_method_access_id": "p-cvgv40mnx6uswm",
+          "auth_method_name": "AWS/aws-iam-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16866993,
+      "role_name": "RBAC_Explantion/Staging/Cloud/AWS",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2026-03-23T08Z",
+      "client_permissions": null,
+      "comment": "Provides full access to the account resources",
+      "creation_date": "2025-06-18T20:39:42Z",
+      "delete_protection": false,
+      "modification_date": "2025-06-18T20:39:42Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-p3w8xubx1isi8bp45zjf",
+          "auth_method_access_id": "p-yq0gfv1r01ghsm",
+          "auth_method_name": "saml okta",
+          "auth_method_sub_claims": {
+            "groups": [
+              "admin"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-ybexi5hdae89q6otjd73",
+          "auth_method_access_id": "p-0dhxlhm7uuw2im",
+          "auth_method_name": "admin",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 15929049,
+      "role_name": "admin",
+      "rules": {
+        "admin": true,
+        "path_rules": null
+      }
+    },
+    {
+      "access_date_display": "2025-11-19T19Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-07-13T07:30:49Z",
+      "delete_protection": false,
+      "modification_date": "2025-11-20T16:10:19Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-8ghcfaktwm5odjv8b98t",
+          "auth_method_access_id": "p-zkui9drg288pum",
+          "auth_method_name": "UID-method/uid-access-for-devops",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        },
+        {
+          "assoc_id": "ass-lbyzhcbbku7h7216ufxa",
+          "auth_method_access_id": "p-yq0gfv1r01ghsm",
+          "auth_method_name": "saml okta",
+          "auth_method_sub_claims": {
+            "groups": [
+              "devops"
+            ]
+          },
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16170202,
+      "role_name": "devops",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/DataBase/*",
+            "start_time": 0,
+            "type": "target-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/devops/*",
+            "start_time": 0,
+            "type": "item-rule"
+          },
+          {
+            "capabilities": [
+              "read",
+              "list",
+              "update",
+              "delete",
+              "create"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "event-forwarder-rule"
+          }
+        ]
+      }
+    },
+    {
+      "access_date_display": "2025-08-21T15Z",
+      "client_permissions": null,
+      "comment": "",
+      "creation_date": "2025-07-16T15:02:13Z",
+      "delete_protection": false,
+      "modification_date": "2025-07-16T15:02:14Z",
+      "role_auth_methods_assoc": [
+        {
+          "assoc_id": "ass-huy6humxi46fhiidmc0m",
+          "auth_method_access_id": "p-7tm0qww5zr84om",
+          "auth_method_name": "jwt-github-auth",
+          "auth_method_sub_claims": {},
+          "sub_claims_case_sensitive": true
+        }
+      ],
+      "role_id": 16203229,
+      "role_name": "github-access-role",
+      "rules": {
+        "admin": false,
+        "path_rules": [
+          {
+            "capabilities": [
+              "read",
+              "list"
+            ],
+            "path": "/*",
+            "start_time": 0,
+            "type": "item-rule"
+          }
+        ]
+      }
+    }
+  ]
+}
+

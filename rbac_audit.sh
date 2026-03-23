@@ -1,61 +1,70 @@
 #!/bin/bash
 
-# Output CSV file name
+# 1. Define File Paths
+AUTH_JSON="auth.json"
+ROLES_JSON="roles.json"
 OUTPUT_FILE="akeyless_rbac_audit.csv"
 
-# Temporary files for JSON data
-AUTH_JSON="auth_methods_temp.json"
-ROLES_JSON="roles_temp.json"
+echo "Step 1/3: Fetching data from Akeyless..."
+# Fetching the latest data
+akeyless list-auth-methods > "$AUTH_JSON"
+akeyless list-roles > "$ROLES_JSON"
 
-echo "[*] Fetching data from Akeyless..."
+echo "Step 2/3: Creating CSV Header..."
+# Initialize CSV file with headers
+printf "Auth_Method_ID,Auth_Method_Name,Auth_Method_Type,Description,Sub_Claims,Role_Name,Rule_Type,Path,Capabilities\n" > "$OUTPUT_FILE"
 
-# Fetching data from Akeyless CLI
-akeyless list-auth-methods --json > "$AUTH_JSON"
-akeyless list-roles --json > "$ROLES_JSON"
-
-echo "[*] Processing correlations..."
-
-# Create CSV Header with Rule_Type to distinguish similar paths
-echo "Access_ID,Auth_Method_Name,Auth_Method_Type,Role_Name,Rule_Type,Path,Capabilities" > "$OUTPUT_FILE"
-
-# Using --slurpfile for compatibility with newer jq versions
+echo "Step 3/3: Processing data with jq..."
+# Main Processing Logic
 jq -r --slurpfile auths "$AUTH_JSON" '
-  # Create a lookup map for Auth Methods using Access ID as key
-  ($auths[0].auth_methods | map({(.auth_method_access_id): {name: .auth_method_name, type: .access_info.rules_type}}) | add) as $am_map |
+  # Create a High-Performance Lookup Map for Auth Methods
+  ($auths[0].auth_methods | 
+    map({
+      (.auth_method_access_id): {
+        name: .auth_method_name, 
+        type: .access_info.rules_type, 
+        desc: (.description // "")
+      }
+    }) | add
+  ) as $am_map |
 
-  # Iterate through all roles
+  # Iterate through every Role in the system
   .roles[] | 
   .role_name as $r_name |
   .role_auth_methods_assoc as $assocs |
-  
-  # Handle Admin roles (no path_rules) and regular roles
+
+  # Handle Role Rules: If Admin, generate a virtual "Full Access" rule
   (if .rules.admin == true then 
     [{path: "/* (Admin)", capabilities: ["ALL"], type: "admin"}] 
    else 
     .rules.path_rules // [] 
    end) as $rules |
 
-  # Iterate through each Auth Method associated with the Role
-  ($assocs[]? // empty) | 
+  # Iterate through Auth Methods associated with this specific Role
+  ($assocs[]? // empty) |
   .auth_method_access_id as $aid |
   
-  # Get Auth Method details from the map
-  ($am_map[$aid] // {name: "Unknown/Deleted", type: "Unknown"}) as $am |
+  # Process Sub-Claims: Map correct field and join array values with commas
+  (.auth_method_sub_claims | if . then to_entries | map("\(.key)=\(.value | join(","))") | join("; ") else "" end) as $sub_claims |
 
-  # Flatten: For every Auth Method, list every Rule assigned to the Role
+  # Retrieve Auth Method details from the Map
+  ($am_map[$aid] // {name: "Unknown/Deleted", type: "Unknown", desc: ""}) as $am |
+
+  # Iterate through each Access Rule within the Role
   $rules[] | 
+  
+  # Construct final array for CSV output
   [
-    $aid, 
-    $am.name, 
-    $am.type, 
-    $r_name, 
+    $aid,
+    $am.name,
+    $am.type,
+    $am.desc,
+    $sub_claims,
+    $r_name,
     .type,
-    .path, 
+    .path,
     (.capabilities | join(";"))
   ] | @csv
 ' "$ROLES_JSON" >> "$OUTPUT_FILE"
 
-echo "[+] Done! Audit report saved to: $OUTPUT_FILE"
-
-# Cleanup temporary files
-rm "$AUTH_JSON" "$ROLES_JSON"
+echo "Success! Report updated with Sub-Claims: $OUTPUT_FILE"
